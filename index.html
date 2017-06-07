@@ -3,38 +3,73 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Interactive Art & “Weird games” submission list</title>
+        <title>Interactive Boutique: Submissions Calendar</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sortable/0.8.0/css/sortable-theme-bootstrap.min.css">
         <style>
+          body {
+            color: #363636;
+              padding: 2rem;
+          }
+            h2 {
+               margin-top: 3em;
+            }
+            hr {
+                margin: 2em 0;
+            }
           header {
             margin-bottom: 60px;
           }
-          
+
           small {
             font-size: 0.6em;
             color: #999;
           }
-          
+
           table {
             margin-bottom: 60px;
             width: 100%;
           }
-          
+
           .entry {
             /*vertical-align: top;*/
           }
-          
+
           .notes {
             max-width: 60vw;
           }
+
+          .info-box {
+            padding: 1rem 2rem;
+            background: #ecedf5;
+            margin: 2em 0;
+            border-radius: 1rem;
+          }
+
+            @media only screen and (max-width: 700px) {
+                table[data-sortable] th, table[data-sortable] td {
+                    display: block;
+                }
+                .name {
+                    font-weight: 600;
+                    padding-top: 4em !important;
+                }
+                .notes {
+                    max-width: 100%;
+                }
+                table[data-sortable].sortable-theme-bootstrap tbody td {
+                    border: none;
+                }
+            }
         </style>
     </head>
     <body>
       <header>
-        <h1>Interactive Art & “Weird games” submission list <small>(Last updated <span id="updated">SOMETIME</span>)</small></h1>
+        <h1>Interactive submission list <small>(Last updated <span id="updated">SOMETIME</span>)</small></h1>
       </header>
+        <p>Curated list of conferences, festivals, and exhibitions taking submissions for interactives, altgames, elit, hypertext fiction, gamelikes, interactive installations, net art, and other digital/itneractive/experimental arts.</p>
       <h2>Upcoming Events</h2>
       <table class="sortable-theme-bootstrap" data-sortable>
         <thead>
@@ -54,6 +89,11 @@
           </tr>
         </tbody>
       </table>
+        <div class="info-box">
+          <p>Add something to this list? Send info to <a href="https://twitter.com/animalphase" target="_blank">@animalphase</a> or <a href="mailto:animalphase@gmail.com">animalphase@gmail.com</a> !</p>
+          <p>List curated by <a href="http://loveme.computer/">Audrey Moon</a>.</p>
+          <p>Thanks <a href="https://twitter.com/doam">@doam</a> for setting up this site!</p>
+        </div>
       <h2>Past Events</h2>
       <table class="sortable-theme-bootstrap" data-sortable>
         <thead>
@@ -65,6 +105,7 @@
         <tbody id="past-entries">
         </tbody>
       </table>
+      <hr />
       <script src="//cdnjs.cloudflare.com/ajax/libs/sortable/0.8.0/js/sortable.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
       <script src="index.js"></script>
